@@ -30,7 +30,7 @@
         }
       },
       "root": "",
-      "sourceRoot": "src", 
+      "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
@@ -50,7 +50,7 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "allowedCommonJsDependencies": [ 
+            "allowedCommonJsDependencies": [
               "ngx-embed-video"
             ],
             "vendorChunk": true,
@@ -184,11 +184,23 @@
           "configurations": {
             "production": {}
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
-    } 
+    }
   },
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
