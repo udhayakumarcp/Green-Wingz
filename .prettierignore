@@ -1,0 +1,6 @@
+.angular
+.husky
+dist
+e2e
+node_modules
+.npmrc
